@@ -328,3 +328,11 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Required DLLs
+!HEIF.NET/HUD.dll
+!HEIF.NET/opencv_ffmpeg330_64.dll
+!HEIF.NET/opencv_world330.dll
+
+# Test Folders
+TestImages/

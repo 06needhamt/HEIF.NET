@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28714.193
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HEIF.NET", "HEIF.NET.csproj", "{08010C06-0858-4DE0-853D-129DF44F26DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "..\TestApp\TestApp.csproj", "{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestImages", "TestImages", "{5A5ED08A-48D0-4804-A98C-0F4CCA1AA0D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +19,15 @@ Global
 		{08010C06-0858-4DE0-853D-129DF44F26DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08010C06-0858-4DE0-853D-129DF44F26DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08010C06-0858-4DE0-853D-129DF44F26DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48036AB8-C67C-4256-8702-3C32B43EDE7E}
 	EndGlobalSection
 EndGlobal
