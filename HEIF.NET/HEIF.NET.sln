@@ -9,20 +9,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "..\TestApp\TestA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestImages", "TestImages", "{5A5ED08A-48D0-4804-A98C-0F4CCA1AA0D8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HEIF.NET.Wrapper", "..\HEIF.NET.Wrapper\HEIF.NET.Wrapper.vcxproj", "{C3FB5448-C367-4E98-B17B-9DC49A63D8EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{08010C06-0858-4DE0-853D-129DF44F26DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08010C06-0858-4DE0-853D-129DF44F26DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08010C06-0858-4DE0-853D-129DF44F26DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08010C06-0858-4DE0-853D-129DF44F26DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08010C06-0858-4DE0-853D-129DF44F26DF}.Debug|x64.ActiveCfg = Debug|x64
+		{08010C06-0858-4DE0-853D-129DF44F26DF}.Debug|x64.Build.0 = Debug|x64
+		{08010C06-0858-4DE0-853D-129DF44F26DF}.Release|x64.ActiveCfg = Release|x64
+		{08010C06-0858-4DE0-853D-129DF44F26DF}.Release|x64.Build.0 = Release|x64
+		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Debug|x64.ActiveCfg = Debug|x64
+		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Debug|x64.Build.0 = Debug|x64
+		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Release|x64.ActiveCfg = Release|x64
+		{83CC6708-9107-44EE-9CB2-9AC3F3A1B304}.Release|x64.Build.0 = Release|x64
+		{C3FB5448-C367-4E98-B17B-9DC49A63D8EE}.Debug|x64.ActiveCfg = Debug|x64
+		{C3FB5448-C367-4E98-B17B-9DC49A63D8EE}.Debug|x64.Build.0 = Debug|x64
+		{C3FB5448-C367-4E98-B17B-9DC49A63D8EE}.Release|x64.ActiveCfg = Release|x64
+		{C3FB5448-C367-4E98-B17B-9DC49A63D8EE}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
