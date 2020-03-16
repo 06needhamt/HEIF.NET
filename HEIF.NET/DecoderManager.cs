@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -40,10 +41,8 @@ namespace HEIF.NET
             try
             {
                 error = string.Empty;
-                IntPtr idPtr;
                 int[] ids = new int[count];
-                int idCount = DecoderWrapper.GetImageIds(FileName, out idPtr, count);
-                Marshal.Copy(idPtr, ids, 0, idCount);
+                int idCount = DecoderWrapper.GetImageIds(FileName, ids, count);
 
                 return ids;
             }
@@ -64,12 +63,14 @@ namespace HEIF.NET
             try
             {
                 error = string.Empty;
-                IntPtr size = new IntPtr();
-                IntPtr data = DecoderWrapper.DecodeImage(FileName, imageId, out size);
-                byte[] imageBytes = new byte[size.ToInt32()];
-                Marshal.Copy(data, imageBytes, 0, size.ToInt32());
 
-                return imageBytes;
+                FileInfo fi = new FileInfo(FileName);
+                IntPtr buffer = new IntPtr();
+                int size = DecoderWrapper.DecodeImage(FileName, imageId, buffer);
+                byte[] data = new byte[size];
+                Marshal.Copy(buffer, data, 0, size);
+
+                return data;
             }
             catch (AggregateException ae)
             {

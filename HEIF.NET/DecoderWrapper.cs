@@ -13,9 +13,9 @@ namespace HEIF.NET
         public static extern int GetNumberOfImagesInFile(string fileName);
 
         [DllImport("HEIF.NET.Wrapper.dll", CallingConvention = CallingConvention.StdCall)]
-        public static extern int GetImageIds(string fileName, out IntPtr ids, int count);
+        public static extern int GetImageIds(string fileName, [Out] int[] ids, int count);
 
         [DllImport("HEIF.NET.Wrapper.dll", CallingConvention = CallingConvention.StdCall)]
-        public static extern IntPtr DecodeImage(string fileName, int imageId, out IntPtr size);
+        public static extern int DecodeImage(string fileName, int imageId, [Out] IntPtr data);
     }
 }

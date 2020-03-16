@@ -21,7 +21,7 @@ LIBHEIF_NATIVE_CALL int __stdcall GetImageIds(const char* fileName, int* ids, in
 	return IdCount;
 }
 
-LIBHEIF_NATIVE_CALL uint8_t* __stdcall DecodeImage(const char* fileName, int imageId, int* size) {
+LIBHEIF_NATIVE_CALL int __stdcall DecodeImage(const char* fileName, int imageId, uint8_t* data) {
 	struct heif_context* ctx = heif_context_alloc();
 	heif_context_read_from_file(ctx, fileName, NULL);
 
@@ -29,19 +29,20 @@ LIBHEIF_NATIVE_CALL uint8_t* __stdcall DecodeImage(const char* fileName, int ima
 	heif_context_get_image_handle(ctx, (heif_item_id)imageId, &handle);
 
 	struct heif_image* image;
-	heif_decode_image(handle, &image, heif_colorspace_RGB, heif_chroma_interleaved_RGB, NULL);
+	struct heif_decoding_options* options = heif_decoding_options_alloc();
+	heif_decode_image(handle, &image, heif_colorspace_RGB, heif_chroma_interleaved_RGB, options);
 
 	int width = heif_image_handle_get_width(handle);
 	int height = heif_image_handle_get_height(handle);
 
 	int stride;
-	uint8_t* data = heif_image_get_plane(image, heif_channel_interleaved, &stride);
+	data = heif_image_get_plane(image, heif_channel_interleaved, &stride);
 	int bytes = width * height * stride;
-	size = &bytes;
-
+	
+	heif_decoding_options_free(options);
 	heif_image_release(image);
 	heif_image_handle_release(handle);
 	heif_context_free(ctx);
 
-	return data;
+	return bytes;
 }
